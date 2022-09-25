@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} Encyclopedia
+{%endblock%} {% block body %}
+<h1 style="width: fit-content">Create a new Page</h1>
+
+<form
+  action="{% url 'create' %}"
+  method="post"
+  style="display: flex; flex-direction: column"
+>
+  {% csrf_token %}
+  <label for="title">Enter a Title</label>
+  <input type="text" id="title" name="title" style="width: fit-content" />
+  <label for="text">Type your Text here</label>
+  <textarea
+    name="text"
+    id="text"
+    cols="10"
+    rows="10"
+    style="width: 500px; height: 200px"
+  ></textarea>
+  <input type="submit" style="width: fit-content; margin-top: 10px" />
+</form>
+
+{% endblock %}

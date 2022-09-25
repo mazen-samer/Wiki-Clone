@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} Encyclopedia
+{%endblock%} {% block nav %}
+<hr />
+{% if searched %}
+<h6 style="margin-top: 20px">Seacrh Results:</h6>
+<ul>
+  {% for item in searched %}
+  <li><a href="/wiki/{{ item }}">{{ item }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<h6 style="margin-top: 20px">Bro, your search is not in the records :3</h6>
+{% endif %} {% endblock %}
