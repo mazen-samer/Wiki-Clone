@@ -1,5 +1,5 @@
 # Wiki-Clone
-First Django project cloning some features of Wikipedia
+###First Django project cloning some features of Wikipedia
 
 * This project uses Django as a back-end for manipulating some features of Wikipedia
 * The "Home" page has a list of all available entries
